@@ -1,0 +1,55 @@
+* {
+  font-family: 'Rajdhani', sans-serif;
+}
+
+body {
+  background: linear-gradient(100deg, #D2D3D3, #666666 );
+}
+
+.title {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 2em;
+}
+
+.title p {
+  font-weight: lighter;
+  margin: 0px;
+  margin-top: -40px
+}
+
+
+
+
+.custom-navbar ul {
+  list-style: none;
+  padding: 0;
+
+}
+
+.custom-navbar li {
+  margin-right: 20px;
+}
+
+.custom-navbar a {
+  text-decoration: none;
+  color: black;
+  font-weight: lighter;
+}
+
+.projects {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.projectList {
+  display: flex;
+  flex-direction: column;
+}
+
+.projectItem {
+  font-size: 2em;
+}
+
+
+
+
