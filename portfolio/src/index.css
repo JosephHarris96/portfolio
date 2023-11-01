@@ -1,23 +1,31 @@
 * {
   font-family: 'Rajdhani', sans-serif;
+  background-color: rgb(228, 228, 228);
 }
 
-body {
-  background: linear-gradient(100deg, #D2D3D3, #666666 );
-}
 
 .title {
   font-family: 'Rajdhani', sans-serif;
   font-size: 2em;
+  padding: 15px;
 }
 
 .title p {
   font-weight: lighter;
-  margin: 0px;
-  margin-top: -40px
 }
 
+.title h2 {
+  font-size: 1em;
+}
 
+.boldOnHover:hover {
+  font-weight: bolder;
+  color: rgb(206, 206, 206);
+}
+
+.homepageNavbar li:hover {
+  font-weight: bolder;
+} 
 
 
 .custom-navbar ul {
@@ -46,10 +54,67 @@ body {
   flex-direction: column;
 }
 
-.projectItem {
-  font-size: 2em;
+.projectList a {
+  display: flex;
+  justify-content: flex-end;
 }
 
+.banconeProject,
+.weatherAppProject {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.banconeProject p,
+.weatherAppProject p {
+  font-size: 1.5em;
+  font-weight: lighter;
+}
+
+.projectItem {
+  font-size: 5em;
+  /* gap: 20px */
+}
+
+
+.submitForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px
+}
+
+.submitForm input {
+  border-radius: 5px;
+}
+
+.submitForm input:nth-child(3) {
+  padding: 50px;
+}
+
+.welcomeTab {
+  display: flex;
+  transform: rotate(-90deg);
+  translate: -6em 45em;
+  font-size: 15px;
+  position: absolute;
+}
+
+.logos {
+  position: absolute;
+  top: 30px; 
+  right: 100px; 
+  display: flex;
+  align-items: center; 
+}
+
+.logos a {
+  margin-left: 60px;
+}
+
+.logos img {
+  width: 50px;
+  position: absolute
+}
 
 
 
