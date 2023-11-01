@@ -11,7 +11,7 @@ function Projects() {
         <a className="projectItem">Bancone</a>
         </div>
         <div className="banconeProject">
-        <p>2023 / The Jump</p>
+        <p>2023 / The Jumpfff</p>
         </div>
         <div>
         <a className="projectItem">Weather App</a>
