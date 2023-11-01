@@ -1,8 +1,11 @@
+import Navbar from "./Navbar";
+
 function Projects() {
   return (
     <div className="project-heading">
       <h1>Projects</h1>
-  
+
+      <Navbar />
       <div className="projectList">
         <div>
         <a className="projectItem">Bancone</a>
