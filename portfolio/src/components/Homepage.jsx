@@ -1,6 +1,7 @@
 import Navbar from "./Navbar";
 import Linkedin from "../assets/images/linkedin.png";
 import Instagram from "../assets/images/instagram.png";
+import Skills from "../Skills";
 
 function Homepage() {
   return (
@@ -20,6 +21,7 @@ function Homepage() {
             </a>
           </div>
           <Navbar />
+          <Skills/>
         </div>
       </div>
   );

@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
 import * as Yup from "yup"
+import { Link } from "react-router-dom"
 
 function Contact() {
     const schema = Yup.object().shape( {
@@ -36,6 +37,9 @@ function Contact() {
   return (
     <div>
         <h1>Contact</h1>
+        <Link to="/homepage">
+            <p>Home</p>
+        </Link>
         <form className="submitForm" onSubmit={handleSubmit(onSubmit)}>
             <input type="text" placeholder="Enter Full Name Here.." {...register("fullName")}></input>
             {errors.fullName?.message}
