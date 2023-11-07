@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
 import * as Yup from "yup"
 import { Link } from "react-router-dom"
+import SocialMediaLinks from "../components/SocialMediaLinks";
 
 function Contact() {
     const schema = Yup.object().shape( {
@@ -40,12 +41,13 @@ function Contact() {
         <Link to="/homepage">
             <p>Home</p>
         </Link>
+        <SocialMediaLinks />
         <form className="submitForm" onSubmit={handleSubmit(onSubmit)}>
             <input type="text" placeholder="Enter Full Name Here.." {...register("fullName")}></input>
             {errors.fullName?.message}
             <input type="text" placeholder="Enter Email Here..." {...register("email")}></input>
             {errors.email?.message}
-            <input type="text" placeholder="Information About Request" {...register("informationAboutRequest")}></input>
+            <input className="informationAboutRequest" type="text" placeholder="Information About Request" {...register("informationAboutRequest")}></input>
             {errors.information?.message}
             <button type="submit">Submit</button>
             

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import SocialMediaLinks from "../components/SocialMediaLinks";
 
 function Projects() {
   return (
@@ -7,12 +8,13 @@ function Projects() {
       <Link to="/homepage">
         <p>Home</p>
       </Link>
+    <SocialMediaLinks />
       <div className="projectList">
         <div>
           <a className="projectItem">Bancone</a>
         </div>
         <div className="banconeProject">
-          <p>2023 / The Jumpfff</p>
+          <p>2023 / The Jump</p>
         </div>
         <div>
           <a className="projectItem">Weather App</a>

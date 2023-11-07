@@ -3,12 +3,35 @@
   background-color: rgb(228, 228, 228);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+.iconElement1, 
+.iconElement2,
+.iconElement3,
+.iconElement4,
+.iconElement5 {
+  opacity: 0;
+} 
+
+.iconElement1, 
+.iconElement2,
+.iconElement3,
+.iconElement4,
+.iconElement5 img p {
+  transition: opacity 1s easy;
+}
+
 
 .title {
   font-family: 'Rajdhani', sans-serif;
   font-size: 2em;
   padding: 15px;
+  height: 100vh
 }
+
+
 
 .title p {
   font-weight: lighter;
@@ -73,7 +96,7 @@
 
 .projectItem {
   font-size: 5em;
-  /* gap: 20px */
+  transform: translate(45deg);
 }
 
 
@@ -116,5 +139,71 @@
   position: absolute
 }
 
+.skillsLogo {
+  display: flex;
+  flex-direction: row; 
+  flex-wrap: wrap; 
+  width: 100%;
+}
+
+.skillsLogo img {
+  width: 50px; 
+}
+
+.iconElement {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  margin: 10px; 
+}
+
+.iconElement img {
+  width: 50px;
+}
 
 
+
+.skillsElement1 img {
+ opacity: 0;
+ transition: opacity 3s;
+}
+
+.listItems {
+  list-style-type: none;
+}
+
+.listItems img {
+  width: 50px;
+  transform: translateY(20px); 
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.item {
+  opacity: 0;
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.item:nth-child(1) {
+  transform: translateX(20px) translateY(50px);
+  transition-delay: 1s;
+}
+
+.item:nth-child(2) {
+  transform: translateX(50px) translateY(-20px);
+  transition-delay: 2s;
+}
+
+.item:nth-child(3) {
+  transform: translateX(-30px) translateY(70px);
+  transition-delay: 3s;
+}
+
+.item:nth-child(4) {
+  transform: translateX(-40px) translateY(-50px);
+  transition-delay: 4s;
+}
+
+.item:nth-child(5) {
+  transform: translateX(60px) translateY(30px);
+  transition-delay: 5s;
+}

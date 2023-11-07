@@ -1,29 +1,78 @@
+import { useState, useEffect } from "react";
 import Navbar from "./Navbar";
-import Linkedin from "../assets/images/linkedin.png";
-import Instagram from "../assets/images/instagram.png";
+import SocialMediaLinks from "./SocialMediaLinks";
 import Skills from "../Skills";
 
+import BootstrapImage from "../assets/images/bootstrap.png";
+import HtmlImage from "../assets/images/html5.png";
+import JavascriptImage from "../assets/images/javascript.png";
+import ReactImage from "../assets/images/react.png";
+import TypescriptImage from "../assets/images/typescript.png";
+
 function Homepage() {
+  const items = [
+    {
+      image: BootstrapImage,
+    },
+    {
+      image: HtmlImage,
+    },
+    {
+      image: JavascriptImage,
+    },
+    {
+      image: ReactImage,
+    },
+    {
+      image: TypescriptImage,
+    }
+  ];
+
+  const [visibleItems, setVisibleItems] = useState([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const delay = 1000;
+
+    const interval = setInterval(() => {
+      if (currentIndex < items.length) {
+        setVisibleItems((prevItems) => [...prevItems, items[currentIndex]]);
+        setCurrentIndex((prevIndex) => prevIndex + 1);
+      } else {
+        clearInterval(interval);
+      }
+    }, delay);
+
+    return () => {
+      clearInterval(interval);
+    }
+  }, [items, currentIndex]);
+
   return (
     <div className="pageContainer">
-      <div className="title">
-          <h1>Joseph Harris</h1>
-          <h2>Software Developer who specialises in JavaScript and React</h2>
-          <div className="logos">
-            <a
-              href="https://www.linkedin.com/feed/?trk=homepage-basic_sign-in-submit"
-              alt="Linkedin Logo"
-            >
-              <img src={Linkedin} alt="Linkedin Logo"></img>
-            </a>
-            <a href="https://www.instagram.com/">
-              <img src={Instagram} alt="Instagram Logo"></img>
-            </a>
-          </div>
-          <Navbar />
-          <Skills/>
+      <section>
+        <div className="skillsObjects">
+          <Skills />
+          <ul className="listItems">
+            {visibleItems.map((item, index) => (
+              <li key={index}>
+                <img src={item.image} alt={item.item} /> {item.item}
+              </li>
+            ))}
+          </ul>
         </div>
-      </div>
+        <div className="title">
+          <h1>Joseph Harris</h1>
+          <h2>Software Developer who specializes in JavaScript and React</h2>
+          <SocialMediaLinks />
+          <Navbar />
+        </div>
+      </section>
+      <section>
+      </section>
+      <section>
+      </section>
+    </div>
   );
 }
 
