@@ -1,58 +1,53 @@
 import { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import SocialMediaLinks from "./SocialMediaLinks";
-import Skills from "../Skills";
+import Projects from "./Projects";
 
-import BootstrapImage from "../assets/images/bootstrap.png";
-import HtmlImage from "../assets/images/html5.png";
-import JavascriptImage from "../assets/images/javascript.png";
-import ReactImage from "../assets/images/react.png";
-import TypescriptImage from "../assets/images/typescript.png";
 
 function Homepage() {
-  const items = [
-    {
-      image: BootstrapImage,
-    },
-    {
-      image: HtmlImage,
-    },
-    {
-      image: JavascriptImage,
-    },
-    {
-      image: ReactImage,
-    },
-    {
-      image: TypescriptImage,
-    }
-  ];
+  // const items = [
+  //   {
+  //     image: BootstrapImage,
+  //   },
+  //   {
+  //     image: HtmlImage,
+  //   },
+  //   {
+  //     image: JavascriptImage,
+  //   },
+  //   {
+  //     image: ReactImage,
+  //   },
+  //   {
+  //     image: TypescriptImage,
+  //   }
+  // ];
 
   const [visibleItems, setVisibleItems] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  useEffect(() => {
-    const delay = 1000;
 
-    const interval = setInterval(() => {
-      if (currentIndex < items.length) {
-        setVisibleItems((prevItems) => [...prevItems, items[currentIndex]]);
-        setCurrentIndex((prevIndex) => prevIndex + 1);
-      } else {
-        clearInterval(interval);
-      }
-    }, delay);
+  // useEffect(() => {
+  //   const delay = 1000;
 
-    return () => {
-      clearInterval(interval);
-    }
-  }, [items, currentIndex]);
+  //   const interval = setInterval(() => {
+  //     if (currentIndex < items.length) {
+  //       setVisibleItems((prevItems) => [...prevItems, items[currentIndex]]);
+  //       setCurrentIndex((prevIndex) => prevIndex + 1);
+  //     } else {
+  //       clearInterval(interval);
+  //     }
+  //   }, delay);
+
+  //   return () => {
+  //     clearInterval(interval);
+  //   }
+  // }, [items, currentIndex]);
 
   return (
-    <div className="pageContainer">
+    <div className="pageContainer" style={{ border: '2px solid #ccc', padding: '10px', margin: '20px' }}>
       <section>
         <div className="skillsObjects">
-          <Skills />
           <ul className="listItems">
             {visibleItems.map((item, index) => (
               <li key={index}>
@@ -62,13 +57,20 @@ function Homepage() {
           </ul>
         </div>
         <div className="title">
+          <div className="mainTitle">
           <h1>Joseph Harris</h1>
+          </div>
           <h2>Software Developer who specializes in JavaScript and React</h2>
+          <p style={{ transform: 'rotate(-90deg)', transformOrigin: 'left bottom', position: 'fixed', left: '28px', bottom: '65%', whiteSpace: 'nowrap', fontSize: '25px'}}>
+            Joseph Harris' Portfolio
+          </p>
+          
           <SocialMediaLinks />
           <Navbar />
         </div>
       </section>
       <section>
+        <Projects/>
       </section>
       <section>
       </section>
