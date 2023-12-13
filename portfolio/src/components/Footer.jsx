@@ -1,43 +1,34 @@
-// import BootstrapImage from "@/assets/images/bootstrap";
-// import HtmlImage from "@/assets/images/html5";
-// import InstagramImage from "@/assets/images/instagram";
-// import JavascriptImage from "@/assets/images/javascript";
-// import ReactImage from "@/assets/images/react";
-// import TypescriptImage from "@/assets/images/typescript";
+import LinkedinImage from "../assets/images/linkedin.png";
+import InstagramImage from "../assets/images/instagram.png";
 
-// function Footer() {
+function Footer() {
+  return (
+    <div className="footerContent">
+      <p>Joseph Harris - Software Developer</p>
+      <img src={LinkedinImage} alt="Linkedin Logo" style={{ bottom: 0, right: 0, margin: '10px', width: '50px' }} />
+      <img src={InstagramImage} alt="Linkedin Logo" style={{  bottom: 0, right: 0, margin: '10px', width: '50px' }} />
 
-//     const items = [
-//         {
-//             image: BootstrapImage,
-//         },
-//         {
-//             image: HtmlImage,
-//         },
-//         {
-//             image: InstagramImage,
-//         },
-//         {
-//             image: JavascriptImage,
-//         },
-//         {
-//             image: ReactImage,
-//         },
-//         {
-//             image: TypescriptImage,
-//         }
-//     ];
+    </div>
+  )
+}
 
-//     return (
-//         <>
-//         <h2 className="footerHeader">Where Software meets Development</h2>
-//         <div className="footerImages">
-//             {items.map((item, index) => {
-//                 <img key={index} src={item.image}></img>
-//             })}
-//         </div>
-//         </>
-//     )
-// }
+export default Footer
 
-// export default Footer;
+
+// .logos {
+//     position: fixed;
+//     top: 30px; 
+//     right: 100px; 
+//     display: flex;
+//     align-items: center; 
+    
+//   }
+  
+//   .logos a {
+//     margin-left: 60px;
+//   }
+  
+//   .logos img {
+//     width: 50px;
+//     position: absolute
+//   }

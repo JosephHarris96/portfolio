@@ -36,10 +36,10 @@ function Contact() {
         }
     }
   return (
-    <div>
+    <div className="contactPage">
         <h1>Contact</h1>
-        <Link to="/homepage">
-            <p>Home</p>
+       <Link to="/homepage">
+       <p>Home</p>
         </Link>
         <SocialMediaLinks />
         <form className="submitForm" onSubmit={handleSubmit(onSubmit)}>

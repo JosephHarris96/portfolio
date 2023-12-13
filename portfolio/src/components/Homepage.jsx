@@ -1,61 +1,19 @@
-import { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import SocialMediaLinks from "./SocialMediaLinks";
 import Projects from "./Projects";
+import BootstrapImage from "../assets/images/bootstrap.png"
+import Html5Image from "../assets/images/html5.png"
+import JavascriptImage from "../assets/images/javascript.png"
+import ReactImage from "../assets/images/react.png"
+import TypescriptImage from "../assets/images/typescript.png"
+import Footer from "./Footer";
 
 
-function Homepage() {
-  // const items = [
-  //   {
-  //     image: BootstrapImage,
-  //   },
-  //   {
-  //     image: HtmlImage,
-  //   },
-  //   {
-  //     image: JavascriptImage,
-  //   },
-  //   {
-  //     image: ReactImage,
-  //   },
-  //   {
-  //     image: TypescriptImage,
-  //   }
-  // ];
 
-  const [visibleItems, setVisibleItems] = useState([]);
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-
-  // useEffect(() => {
-  //   const delay = 1000;
-
-  //   const interval = setInterval(() => {
-  //     if (currentIndex < items.length) {
-  //       setVisibleItems((prevItems) => [...prevItems, items[currentIndex]]);
-  //       setCurrentIndex((prevIndex) => prevIndex + 1);
-  //     } else {
-  //       clearInterval(interval);
-  //     }
-  //   }, delay);
-
-  //   return () => {
-  //     clearInterval(interval);
-  //   }
-  // }, [items, currentIndex]);
-
+function Homepage() {  
   return (
     <div className="pageContainer" style={{ border: '2px solid #ccc', padding: '10px', margin: '20px' }}>
       <section>
-        <div className="skillsObjects">
-          <ul className="listItems">
-            {visibleItems.map((item, index) => (
-              <li key={index}>
-                <img src={item.image} alt={item.item} /> {item.item}
-              </li>
-            ))}
-          </ul>
-        </div>
         <div className="title">
           <div className="mainTitle">
           <h1>Joseph Harris</h1>
@@ -70,10 +28,39 @@ function Homepage() {
         </div>
       </section>
       <section>
+      <section>
+  <div className="skillsHeading">
+    <h1>Skills</h1>
+  </div>
+  <div className="skillsImages">
+    <div>
+    <img className="skillImage" src={BootstrapImage} alt="Bootstrap" />
+    <p>Bootstrap</p>
+    </div>
+    <div>
+    <img className="skillImage" src={Html5Image} alt="HTML5" />
+    <p>HTML5</p>
+    </div>
+    <div>
+    <img className="skillImage" src={JavascriptImage} alt="JavaScript" />
+    <p>JavaScript</p>
+    </div>
+    <div>
+    <img className="skillImage" src={ReactImage} alt="React" />
+    <p>React</p>
+    </div>
+    <div>
+    <img className="skillImage" src={TypescriptImage} alt="TypeScript" />
+    <p>TypeScript</p>
+    </div>
+  </div>
+</section>
+
         <Projects/>
       </section>
       <section>
       </section>
+      <Footer/>
     </div>
   );
 }

@@ -25,7 +25,7 @@ html {
 
 .boldOnHover:hover {
   font-weight: bolder;
-  color: rgb(206, 206, 206);
+  text-decoration: 3px rgb(167, 238, 255) line-through;
 }
 
 .homepageNavbar li:hover {
@@ -62,7 +62,7 @@ html {
   height: 2px; 
   background-color: #000; 
   position: absolute;
-  bottom: -30%;
+  bottom: -86%;
   left: 45%; 
 }
 
@@ -74,6 +74,10 @@ html {
 .projectList {
   display: flex;
   flex-direction: column;
+}
+
+.projectItem:hover {
+  text-decoration: 5px rgb(167, 238, 255) line-through;
 }
 
 .projectList a {
@@ -157,15 +161,25 @@ html {
   width: 50px; 
 }
 
-.iconElement {
+.skillsImages {
   display: flex;
-  flex-direction: column;
-  align-items: center; 
-  margin: 10px; 
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
 }
 
-.iconElement img {
+.skillImage {
   width: 50px;
+  height: auto;
+  margin: 30px;
+  
+}
+
+.skillImage:hover {
+  width: 100px;
+  height: 100px;
+  transition: width 1s;
 }
 
 
@@ -219,4 +233,33 @@ html {
   display: flex;
   justify-content: center;
   font-size: 1em;
+}
+
+.contactPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.submitForm {
+  width: 30%;
+}
+
+.skillsHeading {
+  display: flex;
+  justify-content: center;
+  font-size: 5em;
+}
+
+.skillsHeading::after {
+  content: "";
+  display: block;
+  width: 10%;
+  height: 2px; 
+  background-color: #000; 
+  position: absolute;
+  bottom: -35%;
+  left: 45%; 
 }
