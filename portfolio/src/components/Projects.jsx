@@ -28,6 +28,12 @@ function Projects() {
           <div className="quoteGenerator">
             <p>2023 / The Jump</p>
           </div>
+          <div>
+            <a className="projectItem" href="https://github.com/JosephHarris96/Three.js" target="_blank" rel="noopener noreferrer">Three.JS</a>
+          </div>
+          <div className="threeJs">
+            <p>2023 / The Jump</p>
+          </div>
         </div>
       </div>
     </div>

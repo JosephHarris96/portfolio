@@ -23,11 +23,6 @@ html {
   font-size: 1em;
 }
 
-.boldOnHover:hover {
-  font-weight: bolder;
-  text-decoration: 3px rgb(167, 238, 255) line-through;
-}
-
 .homepageNavbar li:hover {
   font-weight: bolder;
 } 
@@ -55,16 +50,14 @@ html {
   font-size: 5em;
 }
 
-.projectHeading h1::after {
-  content: "";
-  display: block;
-  width: 10%;
-  height: 2px; 
-  background-color: #000; 
-  position: absolute;
-  bottom: -86%;
-  left: 45%; 
+.projectHeading h1:hover::before {
+  content: " { "
 }
+
+.projectHeading h1:hover::after {
+  content: " } "
+}
+
 
 .projects {
   display: flex;
@@ -76,9 +69,22 @@ html {
   flex-direction: column;
 }
 
+.projectItem::before {
+  content: ""
+}
+
 .projectItem:hover {
   text-decoration: 5px rgb(167, 238, 255) line-through;
 }
+
+.projectItem:hover::before {
+  content: "{"
+}
+
+.projectItem:hover::after {
+  content: "}"
+}
+
 
 .projectList a {
   display: flex;
@@ -88,7 +94,8 @@ html {
 .banconeProject,
 .weatherAppProject,
 .randomFactsProject p,
-.quoteGenerator  {
+.quoteGenerator p,
+.threeJs p  {
   display: flex;
   justify-content: flex-end;
 }
@@ -96,7 +103,8 @@ html {
 .banconeProject p,
 .weatherAppProject p,
 .randomFactsProject p,
-.quoteGenerator {
+.quoteGenerator,
+.threeJs p  {
   font-size: 1.5em;
   font-weight: lighter;
 }
@@ -253,13 +261,19 @@ html {
   font-size: 5em;
 }
 
-.skillsHeading::after {
-  content: "";
-  display: block;
-  width: 10%;
-  height: 2px; 
-  background-color: #000; 
-  position: absolute;
-  bottom: -35%;
-  left: 45%; 
+.skillsHeading h1:hover::before {
+  content: "{"
+}
+
+.skillsHeading h1:hover::after {
+  content: "}"
+}
+
+
+.homepageNavbar li:hover::before {
+  content: "{"
+}
+
+.homepageNavbar li:hover::after {
+  content: "}"
 }
