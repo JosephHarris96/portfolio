@@ -6,7 +6,12 @@ import Html5Image from "../assets/images/html5.png"
 import JavascriptImage from "../assets/images/javascript.png"
 import ReactImage from "../assets/images/react.png"
 import TypescriptImage from "../assets/images/typescript.png"
+import PostgresqlImage from "../assets/images/database.png"
+import GitHubImage from "../assets/images/github.png"
+import MongoDbImage from "../assets/images/mongodb.png"
+import NodeJsImage from "../assets/images/nodejs.png"
 import Footer from "./Footer";
+import Info from "./Info";
 
 
 
@@ -25,6 +30,7 @@ function Homepage() {
           
           <SocialMediaLinks />
           <Navbar />
+          <Info />
         </div>
       </section>
       <section>
@@ -52,6 +58,22 @@ function Homepage() {
     <div>
     <img className="skillImage" src={TypescriptImage} alt="TypeScript" />
     <p>TypeScript</p>
+    </div>
+    <div>
+    <img className="skillImage" src={PostgresqlImage} alt="Postgresql" />
+    <p>PostgreSQL</p>
+    </div>
+    <div>
+      <img className="skillImage" src={GitHubImage} alt="GitHub" />
+      <p>GitHub</p>
+    </div>
+    <div>
+      <img className="skillImage" src={MongoDbImage} alt="MongoDB" />
+      <p>MongoDB</p>
+    </div>
+    <div>
+      <img className="skillImage" src={NodeJsImage} alt="NodeJS" />
+      <p>Node.JS</p>
     </div>
   </div>
 </section>

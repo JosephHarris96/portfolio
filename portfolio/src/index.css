@@ -172,19 +172,51 @@ html {
 .skillsImages {
   display: flex;
   justify-content: center;
-  flex-direction: row;
   align-items: center;
   text-align: center;
+  flex-wrap: wrap;
 }
 
 .skillImage {
   width: 50px;
   height: auto;
   margin: 30px;
-  
 }
 
 .skillImage:hover {
+  transform: scale(1.2);
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(20px); }
+  100% { transform: translateX(0px); }
+}
+
+.skillImage:hover {
+  width: 50px;
+  height: auto;
+  margin: 30px;
+  animation: slide 1s ease-in-out infinite; 
+}
+
+
+.visible {
+  opacity: 1;
+  transition: opacity 1s ease-in-out; /* Add a transition effect if desired */
+}
+
+.iconElement1,
+.iconElement2,
+.iconElement3,
+.iconElement4,
+.iconElement5,
+.iconElement6,
+.iconElement7 {
+  opacity: 0;
+}
+
+/* .skillImage:hover {
   width: 100px;
   height: 100px;
   transition: width 1s;
@@ -205,7 +237,7 @@ html {
   width: 50px;
   transform: translateY(20px); 
   transition: opacity 1s ease, transform 1s ease;
-}
+} */
 
 .item {
   opacity: 0;
@@ -276,4 +308,37 @@ html {
 
 .homepageNavbar li:hover::after {
   content: "}"
+}
+
+button {
+  border-radius: 10px;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.gitBtn,
+.linkedinBtn {
+  width: 150px;
+  height: 40px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.infoContainer {
+  background-color: #e0e0e0; /* Replace with your desired color code */
+  padding: 20px; /* Adjust padding as needed */
+}
+
+.infoBorder {
+  /* You can keep your existing styles for the border if needed */
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.footerContainer {
+  background-color: aqua;
 }
