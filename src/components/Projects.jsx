@@ -1,4 +1,6 @@
 function Projects() {
+
+
   return (
     <div className="projectsContainer">
       <div className="projectHeading">

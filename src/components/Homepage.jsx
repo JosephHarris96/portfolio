@@ -12,7 +12,7 @@ import MongoDbImage from "../assets/images/mongodb.png"
 import NodeJsImage from "../assets/images/nodejs.png"
 import Footer from "./Footer";
 import Info from "./Info";
-
+import {Element} from 'react-scroll'
 
 
 
@@ -36,6 +36,7 @@ function Homepage() {
       </section>
       <section>
       <section>
+      <Element name="skills">
   <div className="skillsHeading">
     <h1>Skills</h1>
   </div>
@@ -77,9 +78,12 @@ function Homepage() {
       <p>Node.JS</p>
     </div>
   </div>
+  </Element>
 </section>
 
+    <Element name="projects" />
         <Projects/>
+    <Element />
       </section>
       <section>
       </section>

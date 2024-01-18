@@ -1,3 +1,4 @@
+
 import BootstrapImage from "./assets/images/bootstrap.png";
 import HtmlImage from "./assets/images/html5.png";
 import JavascriptImage from "./assets/images/javascript.png";
@@ -9,7 +10,7 @@ import GitHubImage from "./assets/images/github.png"
 
   function Skills() {
   return (
-    <div>
+    <div id="skillsSection">
       <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '30px'}} className="skillsLogo">
         <div className="iconElement1">
           <img src={BootstrapImage}></img>
