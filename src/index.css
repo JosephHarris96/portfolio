@@ -353,3 +353,6 @@ button {
   background-color: rgba(215, 252, 255, 0.7);
 }
 
+.boldOnHover {
+  cursor: pointer;
+}

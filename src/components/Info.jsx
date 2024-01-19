@@ -1,13 +1,9 @@
-import { useEffect } from "react";
+import {Element} from 'react-scroll'
 
 function Info() {
-  useEffect(() => {
-    const infoSection = document.getElementById('infoSection');
-    if (infoSection) {
-      infoSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  }, []);
+
   return (
+    <Element>
     <div className="infoContainer" id="infoSection">
     <div className="infoBorder">  
       <h2>Hi! I m Joseph Harris, a Front End Junior Software Developer who specialises in JavaScript and React</h2>
@@ -22,6 +18,7 @@ function Info() {
       </div>
     </div>
     </div>
+    </Element>
   )
 }
 
